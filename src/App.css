@@ -1,0 +1,173 @@
+
+h1, h4 {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  z-index: 1;
+  -webkit-text-stroke-width: 0.1rem;
+  -webkit-text-stroke-color: rgba(167, 202, 204, 0.1);
+}
+
+img {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.App {
+  font-family: 'Ubuntu', sans-serif;
+  display: flex;
+  justify-content: center;
+
+  background-color: rgba(167, 202, 204, 0.3);
+  width: 100vw;
+  height: 100vh;
+
+  overflow: hidden;
+  position: relative;
+
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.App-content {
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Img-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  height: 10rem;
+  width: 10rem;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 0.5rem solid rgba(167, 202, 204, 0.1);
+  z-index: 1;
+}
+
+.App-face-image {
+  width: 10rem;
+}
+
+.wrapper {
+  position: absolute;
+  margin-top: 2.6rem;
+  height: 15rem;
+  width: 15rem;
+  border-radius: 50%;
+  background: rgba(167, 202, 204, 0.1);
+
+  animation:spin 20s linear infinite reverse paused;
+}
+
+.wrapper-2 {
+  position: absolute;
+  margin-top: 2.2rem;
+  height: 20rem;
+  width: 20rem;
+  border-radius: 50%;
+  background: rgba(167, 202, 204, 0.1);
+
+  animation:spin-2 22s linear infinite reverse paused;
+}
+
+.wrapper-3 {
+  position: absolute;
+  margin-top: 1.8rem;
+  height: 25rem;
+  width: 25rem;
+  border-radius: 50%;
+  background: rgba(167, 202, 204, 0.1);
+
+  animation:spin-3 24s linear infinite reverse paused;
+}
+
+.orbit {
+  height: 100%;
+  width: 100%;
+  z-index:1;
+  border-radius: 50%;
+}
+
+.orbit-1 {
+  animation:spin 15s linear infinite;
+}
+
+.orbit-2 {
+  animation:spin-2 17s linear infinite;
+}
+
+.orbit-3 {
+  animation:spin-3 19s linear infinite;
+}
+
+.planet {
+  position:absolute;
+
+  height: 2rem;
+  z-index:2;
+
+  top: 8%;
+  left: 8%;
+
+  animation:spin 30s linear infinite;
+}
+
+.planet-3 {
+  top: 11%;
+  left: 11%;
+}
+
+.animationSlow {
+  animation-play-state: running;
+}
+
+.animationNormal {
+  animation-play-state: paused;
+}
+
+/*.wrapper:hover, .wrapper-2:hover, .wrapper-3:hover {*/
+  /*animation-play-state: running;*/
+/*}*/
+
+@keyframes spin {
+  0% {
+    transform:rotate(0deg);
+  }
+  100% {
+    transform:rotate(360deg);
+  }
+}
+
+@keyframes spin-2 {
+  0% {
+    transform:rotate(-45deg);
+  }
+  100% {
+    transform:rotate(315deg);
+  }
+}
+
+@keyframes spin-3 {
+  0% {
+    transform:rotate(-90deg);
+  }
+  100% {
+    transform:rotate(270deg);
+  }
+}
+

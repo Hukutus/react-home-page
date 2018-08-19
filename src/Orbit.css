@@ -1,0 +1,71 @@
+.Orbit {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+
+  transform: translate(-50%, -50%);
+
+  transform-origin: center center;
+  animation: ReverseOrbitAnimation 15s linear infinite reverse;
+}
+
+.InnerOrbit {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid lightgrey;
+
+  transform-origin: center center;
+  animation: OrbitAnimation 30s linear infinite forwards;
+}
+
+.Planet {
+  position: absolute;
+
+  left: 50%;
+  overflow: hidden;
+
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: aqua;
+
+  box-shadow: inset 0 0 0.5rem 0.2rem mediumaquamarine;
+}
+
+.Logo {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 60%;
+}
+
+.Slow {
+  animation-play-state: paused;
+}
+
+@keyframes OrbitAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes ReverseOrbitAnimation {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
